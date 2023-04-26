@@ -7,74 +7,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css" type="text/css">
     <style>
-      .box+p {
-        color: tomato;
+      @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .box:hover {
-        background-color: brown;
+      body {
+        padding: 15px 20px;
+        font-family: 'Nunito', sans-serif;
       }
 
-      .box>h1 {
-        color: blueviolet;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.3rem;
+        padding: 0 10px;
       }
 
-      .box2>h1 {
-        color: rgb(43, 226, 52);
+      header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
       }
 
-      li:nth-child(2n+1) {
-        color: saddlebrown;
+      img {
+        width: 100%;
       }
 
-      .paray p:hover:before {
-        content: 'Hio';
-        font-weight: bold;
-        font-size: 20px;
+      .display-section {
+        margin: 20px 0 30px 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
       }
 
-      .paray p::after {
-        content: 'lio';
-        font-weight: bold;
-        font-size: 20px;
+      .article-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+      }
+
+      .article {
+        padding: 10px 15px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      }
+
+      .article h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+
+
+      @media (max-width: 1000px) {
+        .article-section {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 750px) {
+        .display-section {
+          grid-template-columns: 1fr;
+        }
+
+        .article-section {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 550px) {
+        nav {
+          visibility: hidden;
+        }
       }
     </style>
 
-  </head>
-
-
-
   <body>
 
-    <div class="paray">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia dicta vero amet eius quisquam quidem impedit
-        soluta accusamus minus odio.</p>
-    </div>
+
+    <!-- header section -->
+    <header>
+      <h1>Sample Grid</h1>
+      <nav>
+
+        <a href="">About</a>
+        <a href="">Contact</a>
 
 
-    <ul>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Lorem ipsum dolor sit.</li>
-      <li>Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
-      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint?</li>
-    </ul>
+      </nav>
+
+    </header>
 
 
-    <div class="box">
-      <h1>Hello Box</h1>
-      <div class="box2">
-        <h1>Hello World</h1>
+
+
+    <!-- display section -->
+    <div class="display-section">
+
+      <div class="display-image">
+        <img
+          src="https://images.unsplash.com/photo-1669561278968-92321e8620a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZSUzQnxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+          alt="">
+      </div>
+
+      <div class="dis-info">
+        <h2>Sample Grid</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eius, deleniti corrupti ab saepe sequi quasi
+          excepturi architecto, minus suscipit similique! Architecto, dolore quia! Eum deserunt reiciendis, aut eveniet
+          reprehenderit amet aliquam ducimus voluptas inventore atque veritatis saepe, modi praesentium eos minus
+          debitis ut quos fugiat enim. Mollitia, ab labore.</p>
       </div>
 
     </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quibusdam?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quibusdam?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quibusdam?</p>
+
+
+
+
+
+    <!-- article section -->
+    <div class="article-section">
+
+      <div class="article">
+        <h2>Paintings</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit ipsum, repellendus incidunt quas
+          numquam quod laudantium similique unde totam facere mollitia exercitationem doloribus ad quis ab ipsam non
+          animi. Enim cumque consectetur laborum tenetur a ipsam fuga, inventore rerum, voluptate delectus eum similique
+          illum laboriosam nobis deleniti voluptas itaque?</p>
+      </div>
+
+      <div class="article">
+        <h2>Writing</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit ipsum, repellendus incidunt quas
+          numquam quod laudantium similique unde totam facere mollitia exercitationem doloribus ad quis ab ipsam non
+          animi. Enim cumque consectetur laborum tenetur a ipsam fuga, inventore rerum, voluptate delectus eum similique
+          illum laboriosam nobis deleniti voluptas itaque?</p>
+      </div>
+
+      <div class="article">
+        <h2>Reading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit ipsum, repellendus incidunt quas
+          numquam quod laudantium similique unde totam facere mollitia exercitationem doloribus ad quis ab ipsam non
+          animi. Enim cumque consectetur laborum tenetur a ipsam fuga, inventore rerum, voluptate delectus eum similique
+          illum laboriosam nobis deleniti voluptas itaque?</p>
+      </div>
+
+
+
+    </div>
+
+
+
+
 
 
   </body>
+
+
 
 </html>
